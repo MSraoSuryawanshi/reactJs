@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import BannerOneComponent from "./components/BannerOne/BannerOneComponent";
+import BannerThreeComponent from "./components/BannerThree/BannerThreeComponent";
+import BannerTwoComponent from "./components/BannerTwo/BannerTwoComponent";
+import ContactUSComponent from "./components/ContactUs/ContactUSComponent";
+import FooterComponent from "./components/Footer/FooterComponent";
+import NavComponent from "./components/Nav/NavComponent";
+import ProductsComponent from "./components/Products/ProductsComponent";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* Nav */}
+      <NavComponent />
+
+      {/* BannerOne */}
+      <BannerOneComponent />
+
+      {/* Products */}
+      <ProductsComponent />
+
+      {/* BannerTwo */}
+      <BannerTwoComponent />
+
+      {/* ContactUs */}
+      <ContactUSComponent />
+
+      {/* BannerThree */}
+      <BannerThreeComponent />
+
+      {/* Footer */}
+      <FooterComponent />
+    </>
   );
 }
 
