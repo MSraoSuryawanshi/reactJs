@@ -1,57 +1,21 @@
-function ProductsComponent(props) {
+function ProductsComponent() {
+  var name = "Alex";
+  var names = ["Ashitosh", "Ali", "Alex"];
   return (
     <div className="container">
       <div className="section">
         {/* Icon Section */}
         <div className="row">
-          <div className="col s12 m4">
-            <div className="icon-block">
-              <h2 className="center brown-text">
-                <i className="material-icons">flash_on</i>
-              </h2>
-              <h5 className="center">Speeds up development</h5>
+          <h1>Products Goes here...!</h1>
+          {/* Data Bining with React Expressions... */}
+          <h1> {name} </h1>
+          <h1> {2 + 3} </h1>
 
-              <p className="light">
-                We did most of the heavy lifting for you to provide a default
-                stylings that incorporate our custom components. Additionally,
-                we refined animations and transitions to provide a smoother
-                experience for developers.
-              </p>
-            </div>
-          </div>
+          <h1> {names} </h1>
 
-          <div className="col s12 m4">
-            <div className="icon-block">
-              <h2 className="center brown-text">
-                <i className="material-icons">group</i>
-              </h2>
-              <h5 className="center">User Experience Focused</h5>
-
-              <p className="light">
-                By utilizing elements and principles of Material Design, we were
-                able to create a framework that incorporates components and
-                animations that provide more feedback to users. Additionally, a
-                single underlying responsive system across all platforms allow
-                for a more unified user experience.
-              </p>
-            </div>
-          </div>
-
-          <div className="col s12 m4">
-            <div className="icon-block">
-              <h2 className="center brown-text">
-                <i className="material-icons">settings</i>
-              </h2>
-              <h5 className="center">Easy to work with</h5>
-
-              <p className="light">
-                We have provided detailed documentation as well as specific code
-                examples to help new users get started. We are also always open
-                to feedback and can answer any questions a user may have about
-                Materialize.
-              </p>
-            </div>
-          </div>
+          {names.map((name) => (
+            <h1> {name} </h1>
+          ))}
         </div>
       </div>
     </div>
