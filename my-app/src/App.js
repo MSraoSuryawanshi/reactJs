@@ -17,7 +17,7 @@ function App() {
       <BannerOneComponent />
 
       {/* Products */}
-      <ProductsComponent />
+      <ProductsComponent prodId="1001" />
 
       {/* BannerTwo */}
       <BannerTwoComponent />

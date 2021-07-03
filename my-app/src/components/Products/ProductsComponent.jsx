@@ -1,21 +1,32 @@
+import { ProductComponent } from "./../../shared/ProductComponent";
+
 function ProductsComponent() {
-  var name = "Alex";
-  var names = ["Ashitosh", "Ali", "Alex"];
+  var products = [
+    {
+      prodId: 1001,
+      prodName: "Mobile Screen",
+    },
+    {
+      prodId: 1002,
+      prodName: "Mobile Charger",
+    },
+    {
+      prodId: 1003,
+      prodName: "Mobile Hradphones",
+    },
+  ];
   return (
     <div className="container">
       <div className="section">
+        {/* 
+        { }  -> comments, Block, Exp, Binding
+         */}
+
         {/* Icon Section */}
         <div className="row">
-          <h1>Products Goes here...!</h1>
-          {/* Data Bining with React Expressions... */}
-          <h1> {name} </h1>
-          <h1> {2 + 3} </h1>
-
-          <h1> {names} </h1>
-
-          {names.map((name) => (
-            <h1> {name} </h1>
-          ))}
+          {products.map((product) => {
+            return <ProductComponent prdData={product} />;
+          })}
         </div>
       </div>
     </div>
