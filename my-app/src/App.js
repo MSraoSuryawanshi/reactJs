@@ -23,7 +23,7 @@ function App() {
       <BannerTwoComponent />
 
       {/* ContactUs */}
-      <ContactUSComponent />
+      <ContactUSComponent name="Alex" />
 
       {/* BannerThree */}
       <BannerThreeComponent />

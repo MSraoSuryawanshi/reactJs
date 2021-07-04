@@ -1,14 +1,15 @@
+import PropTypes from "prop-types";
+
 function ProductComponent(props) {
+  const myCSS = { color: props.prdData.prodRange };
+
   console.log(props.prdData);
   return (
     <>
       <div className="col s12 m4">
         <div className="card">
           <div className="card-image">
-            <img
-              src="https://materializecss.com/images/sample-1.jpg"
-              alt="prod Name"
-            />
+            <img src={props.prdData.prodImg} alt="prod Name" height="300px" />
             <span className="card-title">Card Title</span>
             <a
               href="!#"
@@ -18,8 +19,16 @@ function ProductComponent(props) {
             </a>
           </div>
           <div className="card-content">
-            <p>{props.prdData.prodId} </p>
-            <p>{props.prdData.prodName} </p>
+            <p style={myCSS}>Prod Id: {props.prdData.prodId}</p>
+            <p style={myCSS}>Prod Name: {props.prdData.prodName}</p>
+
+            <div>
+              {props.prdData.inStock ? (
+                <p>Prod in stock: {props.prdData.inStock} </p>
+              ) : (
+                "Out Of Stock"
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -28,3 +37,24 @@ function ProductComponent(props) {
 }
 
 export { ProductComponent };
+
+ProductComponent.defaultProps = {
+  prdData: {
+    prodId: 1111,
+    prodName: "dummy prod",
+    inStock: 11,
+    prodRange: "orange",
+    prodImg:
+      "https://www.path-tec.com/wp-content/uploads/2015/02/shop-placeholder.png",
+  },
+};
+
+ProductComponent.propTypes = {
+  prdData: {
+    prodId: PropTypes.number,
+    prodName: PropTypes.string,
+    inStock: PropTypes.number,
+    prodRange: PropTypes.string,
+    prodImg: PropTypes.string,
+  },
+};
