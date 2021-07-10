@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 function ProductComponent(props) {
-  const myCSS = { color: props.prdData.prodRange };
+  // const myCSS = { color: props.prdData.prodRange };
 
   console.log(props.prdData);
   return (
