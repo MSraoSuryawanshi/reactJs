@@ -3,6 +3,11 @@ import { Component } from "react";
 class ContactUSComponent extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      name: "Alex",
+      city: "Mumbai",
+    };
   }
 
   render() {
@@ -15,6 +20,7 @@ class ContactUSComponent extends Component {
                 <i className="mdi-content-send brown-text"></i>
               </h3>
               <h1>hey {this.props.name}, Contact Us</h1>
+              <h2 style={{ color: "red" }}>{this.state.name}</h2>
               <p className="left-align light">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                 scelerisque id nunc nec volutpat. Etiam pellentesque tristique
@@ -37,3 +43,23 @@ class ContactUSComponent extends Component {
 }
 
 export default ContactUSComponent;
+
+/*
+ReactJS - State: stateful component
+The state is an updatable structure that is used to contain data or 
+information about the component. The state in a component can change over time. 
+The change in state over time can happen as a response to user action or system events. 
+A component with the state is known as stateful components. It is the heart of the react 
+component which determines the behavior of the component and how it will render. 
+They are also responsible for making a component dynamic and interactive. 
+State is the place where the data comes from. We should always try to make our state as 
+simple as possible and minimize the number of stateful components. If we have, for example, 
+ten components that need data from the state, we should create one container component that 
+will keep the state for all of them.
+
+
+Using State
+The following sample code shows how to create a stateful 
+component using EcmaScript2016 syntax.
+
+*/

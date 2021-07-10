@@ -9,6 +9,7 @@ function ProductComponent(props) {
       <div className="col s12 m4">
         <div className="card">
           <div className="card-image">
+            {/* <img src={require(props.prdData.pImg).default} width="100px" /> */}
             <img src={props.prdData.prodImg} alt="prod Name" height="300px" />
             <span className="card-title">Card Title</span>
             <a
@@ -19,8 +20,9 @@ function ProductComponent(props) {
             </a>
           </div>
           <div className="card-content">
-            <p style={myCSS}>Prod Id: {props.prdData.prodId}</p>
-            <p style={myCSS}>Prod Name: {props.prdData.prodName}</p>
+            <p>Prod Id: {props.prdData.prodId}</p>
+            <p>Prod Name: {props.prdData.prodName}</p>
+            <p>Prod MRP: &#8377; {props.prdData.price}</p>
 
             <div>
               {props.prdData.inStock ? (

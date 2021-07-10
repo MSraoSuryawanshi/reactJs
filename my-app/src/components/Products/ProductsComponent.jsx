@@ -7,6 +7,8 @@ function ProductsComponent() {
       prodName: "Mobile Screen",
       inStock: 0,
       prodRange: "red",
+      pImg: "../../assets/img/mob1.png",
+      price: 1200,
       prodImg:
         "https://5.imimg.com/data5/KC/PC/MY-38629861/dummy-chronograph-watch-500x500.jpg",
     },
@@ -15,6 +17,8 @@ function ProductsComponent() {
       prodName: "Mobile Charger",
       inStock: 10,
       prodRange: "blue",
+      pImg: "../../assets/img/mob2.png",
+      price: 1200,
       prodImg:
         "https://images-na.ssl-images-amazon.com/images/I/71KJMBUedYL._UX342_.jpg",
     },
@@ -23,6 +27,8 @@ function ProductsComponent() {
       prodName: "Mobile Hradphones",
       inStock: 10,
       prodRange: "green",
+      pImg: "./../../assets/img/mob3.png",
+      price: 1200,
       prodImg:
         "https://images-na.ssl-images-amazon.com/images/I/81bSWFV1tsL._UL1500_.jpg",
     },
