@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function ProductComponent(props) {
   // const myCSS = { color: props.prdData.prodRange };
@@ -17,9 +17,9 @@ function ProductComponent(props) {
               href="!#"
               className="btn-floating halfway-fab waves-effect waves-light red"
             >
-              {/* <Link to="/lapi/"> */}
-              <i className="material-icons">add</i>
-              {/* </Link> */}
+              <NavLink to={"/lapi/" + props.prdData.prodId}>
+                <i className="material-icons">add</i>
+              </NavLink>
             </a>
           </div>
           <div className="card-content">
