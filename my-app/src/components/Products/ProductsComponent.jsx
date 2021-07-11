@@ -1,4 +1,4 @@
-import { Route, Link, Switch, BrowserRouter as Router } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import HomeComponent from "../home/HomeComponent";
 import PageNotFoundComponent from "../PageNotFoundComponent/PageNotFoundComponent";
@@ -14,7 +14,7 @@ function ProductsComponent() {
       prodName: "Mobile Screen",
       inStock: 0,
       prodRange: "red",
-      pImg: "../../assets/img/mob1.png",
+      pImg: "./../../assets/img/pnf.jpeg",
       price: 1200,
       prodImg:
         "https://5.imimg.com/data5/KC/PC/MY-38629861/dummy-chronograph-watch-500x500.jpg",
@@ -53,12 +53,18 @@ function ProductsComponent() {
             return <ProductComponent prdData={product} key={index} />;
           })}
         </div>
+        {/* 
+        var id = 1001;
+        :id;
+         */}
         <Switch>
           <Route exact path="/" component={HomeComponent} />
           <Route path="/home" component={HomeComponent} />
           <Route path="/mobile" component={MobileComponent} />
-          <Route path="/lapi" component={LaptopsComponent} />
+          <Route path="/lapi/:id" component={LaptopsComponent} />
           <Route path="/plants" component={PlantsComponent} />
+          {/* <Route path="/prodDetails" component={PlantsComponent} /> */}
+
           <Route component={PageNotFoundComponent} />
         </Switch>
       </div>

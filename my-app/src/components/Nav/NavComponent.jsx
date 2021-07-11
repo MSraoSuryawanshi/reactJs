@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function NavComponent() {
   return (
@@ -9,19 +9,29 @@ function NavComponent() {
         </a>
         <ul className="right hide-on-med-and-down">
           <li>
-            <Link to="/">Home</Link>
+            <NavLink to="/" exact activeStyle={{ color: "green" }}>
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/home">Home</Link>
+            <NavLink to="/home" exact activeStyle={{ color: "green" }}>
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/mobile">Mobiles</Link>
+            <NavLink to="/mobile" exact activeStyle={{ color: "green" }}>
+              Mobiles
+            </NavLink>
           </li>
           <li>
-            <Link to="/lapi">Laptops</Link>
+            <NavLink to="/lapi/1001" exact activeStyle={{ color: "green" }}>
+              Laptops
+            </NavLink>
           </li>
           <li>
-            <Link to="/plants">Plants</Link>
+            <NavLink to="/plants" exact activeStyle={{ color: "green" }}>
+              Plants
+            </NavLink>
           </li>
         </ul>
       </div>

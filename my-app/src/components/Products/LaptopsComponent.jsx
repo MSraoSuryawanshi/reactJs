@@ -1,5 +1,8 @@
+import { useParams } from "react-router-dom";
+
 function LaptopsComponent(props) {
-  return <h1>Laptops Goes here..!</h1>;
+  let { id } = useParams();
+  return <h1>{id} Laptops Goes here..!</h1>;
 }
 
 export default LaptopsComponent;
