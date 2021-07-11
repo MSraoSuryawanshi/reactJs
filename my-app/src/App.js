@@ -1,3 +1,5 @@
+import { BrowserRouter as Router } from "react-router-dom";
+
 import "./App.css";
 import BannerOneComponent from "./components/BannerOne/BannerOneComponent";
 import BannerThreeComponent from "./components/BannerThree/BannerThreeComponent";
@@ -10,26 +12,15 @@ import ProductsComponent from "./components/Products/ProductsComponent";
 function App() {
   return (
     <>
-      {/* Nav */}
-      <NavComponent />
-
-      {/* BannerOne */}
-      <BannerOneComponent />
-
-      {/* Products */}
-      <ProductsComponent prodId="1001" />
-
-      {/* BannerTwo */}
-      <BannerTwoComponent />
-
-      {/* ContactUs */}
-      <ContactUSComponent name="Alex" />
-
-      {/* BannerThree */}
-      <BannerThreeComponent />
-
-      {/* Footer */}
-      <FooterComponent />
+      <Router>
+        <NavComponent />
+        <BannerOneComponent />
+        <ProductsComponent prodId="1001" />
+        <BannerTwoComponent />
+        <ContactUSComponent name="Alex" />
+        <BannerThreeComponent />
+        <FooterComponent />
+      </Router>
     </>
   );
 }

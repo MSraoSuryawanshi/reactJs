@@ -1,4 +1,11 @@
+import { Route, Link, Switch, BrowserRouter as Router } from "react-router-dom";
+
+import HomeComponent from "../home/HomeComponent";
+import PageNotFoundComponent from "../PageNotFoundComponent/PageNotFoundComponent";
 import { ProductComponent } from "./../../shared/ProductComponent";
+import LaptopsComponent from "./LaptopsComponent";
+import MobileComponent from "./MobileComponent";
+import PlantsComponent from "./PlantsComponent";
 
 function ProductsComponent() {
   var products = [
@@ -46,6 +53,14 @@ function ProductsComponent() {
             return <ProductComponent prdData={product} key={index} />;
           })}
         </div>
+        <Switch>
+          <Route exact path="/" component={HomeComponent} />
+          <Route path="/home" component={HomeComponent} />
+          <Route path="/mobile" component={MobileComponent} />
+          <Route path="/lapi" component={LaptopsComponent} />
+          <Route path="/plants" component={PlantsComponent} />
+          <Route component={PageNotFoundComponent} />
+        </Switch>
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function NavComponent() {
   return (
     <nav className="white" role="navigation">
@@ -7,18 +9,21 @@ function NavComponent() {
         </a>
         <ul className="right hide-on-med-and-down">
           <li>
-            <a href="!#">Navbar Link</a>
+            <Link to="/">Home</Link>
           </li>
-        </ul>
-
-        <ul id="nav-mobile" className="sidenav">
           <li>
-            <a href="!#">Navbar Link</a>
+            <Link to="/home">Home</Link>
+          </li>
+          <li>
+            <Link to="/mobile">Mobiles</Link>
+          </li>
+          <li>
+            <Link to="/lapi">Laptops</Link>
+          </li>
+          <li>
+            <Link to="/plants">Plants</Link>
           </li>
         </ul>
-        <a href="!#" data-target="nav-mobile" className="sidenav-trigger">
-          <i className="material-icons">menu</i>
-        </a>
       </div>
     </nav>
   );
